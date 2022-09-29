@@ -9,17 +9,19 @@ if(isset($_POST['submit'])){ //Validation du formulaire
   $prenom=$_POST['prenom'];
   $adresse=$_POST['adresse'];
   $telephone=$_POST['telephone'];
+  $service=$_POST['service'];
   $email=$_POST['email'];
   $password=$_POST['password'];
-  $confirmPassword=$_POST['confirmPassword'];
   
+  //addUser($name,$prenom,$adresse,$telephone,$service,$email,$password);
 };
 
+    //echo($_POST['nom']);
 
-//preparer la requete
-//$requete='INSERT INTO `users` (`nom`, `prenom`, `email`, `password`, `service`) VALUES ( 'test', 'test', 'test@test.test', '123456789', 'MMP');;'
-//exectuter ma requete 
+  //preparer la requete
+  //$requete="INSERT into users (nom , prenom ) VALUES ('$nom','$prenom')";
 
+ 
 
 ?>
 

@@ -19,4 +19,12 @@
             } 
             }
 
+
+
+            function addUser($name,$prenom,$adresse,$telephone,$service,$email,$password){
+                $mysqli = new mysqli($servername,$username,$password,$dbName);
+                
+            };
+
+
         ?>

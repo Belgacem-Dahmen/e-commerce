@@ -2,28 +2,41 @@
 include './includes/functions.php';
 include './includes/header.php';
 //connexon BDD
-connectDb($servername,$username,$password,$dbName);
+//connectDb($servername,$username,$password,$dbName);
+//$cnx=connectDb("localhost","admin","admin","ipda");
+$cnx = new mysqli("localhost","admin","admin","ipda");
 
-if(isset($_POST['submit'])){ //Validation du formulaire
+
+
+
+   if(isset($_POST['submit'])){ //Validation du formulaire
   $name=$_POST['nom'];
   $prenom=$_POST['prenom'];
   $adresse=$_POST['adresse'];
   $telephone=$_POST['telephone'];
-  $service=$_POST['service'];
+  $service=strtoupper($_POST['service']);
   $email=$_POST['email'];
-  $password=$_POST['password'];
+  $password=md5($_POST['password']);
   
+  $q="INSERT INTO users (nom,prenom,adresse,telephone,service,email,password) Values ('$name','$prenom','$adresse','$telephone','$service','$email','$password')";
+  if ($cnx->query($q) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $q . "<br>" . $cnx->error;
+}
+
+$cnx->close();
+  //var_dump($_POST);
   //addUser($name,$prenom,$adresse,$telephone,$service,$email,$password);
 };
 
-    //echo($_POST['nom']);
 
-  //preparer la requete
-  //$requete="INSERT into users (nom , prenom ) VALUES ('$nom','$prenom')";
 
- 
 
 ?>
+
+
+
 
 <div class="container-fluid col-4 mt-3">
 <form method="POST" action="signIn.php">

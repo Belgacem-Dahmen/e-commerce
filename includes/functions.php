@@ -4,19 +4,21 @@
             
             $servername ='localhost';
             $username = 'admin';
-            $password = 'admin';
+            $db_password = 'admin';
             $dbName ='ipda';
             
-            connectDb($servername,$username,$password,$dbName);
             
-            function connectDb($servername,$username,$password,$dbName){
-            $mysqli = new mysqli($servername,$username,$password,$dbName);
+            
+            function connectDb($servername,$username,$db_password,$dbName){
+            $mysqli = new mysqli($servername,$username,$db_password,$dbName);
 
             // Check connection
             if ($mysqli -> connect_errno) {
             echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
             exit();
-            } 
+            } else {
+                echo "connected";
+            }
             }
 
 

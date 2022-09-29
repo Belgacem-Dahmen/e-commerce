@@ -12,7 +12,7 @@ include './includes/header.php';
 
     
 </div>
-  <?php
+<?php
 
 include './includes/footer.php';
 ?>

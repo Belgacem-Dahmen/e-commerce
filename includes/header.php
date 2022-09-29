@@ -29,6 +29,7 @@
         <a class="mx-3 nav-link" href="services.php">Services</a>
         <a class="mx-3 nav-link" href="about.php">About Us</a>
         <a class="mx-3 nav-link" href="contact.php">Contact</a>
+        <a class="mx-3 nav-link" href="dashboard.php">dashboard</a>
     </div>  
         <div>
         <a href="login.php"><button class="btn btn-primary text-white" type="submit">Login</button></a>

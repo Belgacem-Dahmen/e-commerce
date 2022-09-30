@@ -22,7 +22,7 @@ $cnx = new mysqli("localhost","admin","admin","ipda");
     }
     elseif ($row["email"] == $email and $row["password"]==md5($password) and $row["role"]==='admin'){
       echo("Vous etes connecté comme admin");
-      header('location:dashboard.php');
+      header('location:./dashboard/index.html');
     }
     else{
       echo ("sorry baby");
